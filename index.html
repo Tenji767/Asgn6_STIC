@@ -124,9 +124,9 @@
         if (player.dashCooldown > 0) return;
         if (player.dx === 0 && player.dy === 0) return;
 
-        player.dashCooldown = 10;
+        player.dashCooldown = 5;
 
-        const dashDist = 120;
+        const dashDist = 200;
         const norm = Math.hypot(player.dx, player.dy);
 
         const dirX = player.dx / norm;
@@ -138,7 +138,7 @@
         player.x += dirX * dashDist;
         player.y += dirY * dashDist;
 
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 10; i++) {
           afterimages.push({
             x: oldX + dirX * (i * 20),
             y: oldY + dirY * (i * 20),

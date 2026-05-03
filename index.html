@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Hehe Tank Go Pewpew</title>
+  <title>Player Go Dash</title>
 </head>
 
 <body>
@@ -16,6 +16,30 @@
   const canvas=document.getElementById('gameCanvas');
   const canvasContext = canvas.getContext('2d');
 
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+ // player details 
+
+
+const player = {
+  x: canvas.width/2,
+  y: canvas.height/2,
+  width: 50,
+  height: 50,
+  speed: 7,
+  dx: 0,
+  dy: 0,
+  health: 10
+}
+
+//draw function
+
+function draw(){
+  canvasContext.clearRect(0,0,canvas.width, canvas.height);
+  canvasContext.fillStyle = 'black';
+  canvasContext.fillRect(0,0,canvas.width, canvas.height);
+}
 
 
 
@@ -45,10 +69,6 @@
 
 
 
-
-
-
-  
 </script>
 
 

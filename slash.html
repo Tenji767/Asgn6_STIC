@@ -66,7 +66,7 @@ function distance(a, b) {
 // ================= ATTACK =================
 function attack(dirX, dirY) {
   if (player.attackCooldown > 0) return;
-  player.attackCooldown = 20;
+  player.attackCooldown = 10;
 
   const angle = Math.atan2(dirY, dirX);
 
@@ -99,7 +99,7 @@ function dash() {
   if (player.dashCooldown > 0) return;
   if (player.dx === 0 && player.dy === 0) return;
 
-  player.dashCooldown = 15;
+  player.dashCooldown = 10;
 
   const dashDist = 120;
   const norm = Math.hypot(player.dx, player.dy);
@@ -289,7 +289,7 @@ ctx.fillText("Score: " + score, 20, 30);
 }
 
 // ================= SPAWN =================
-setInterval(spawnEnemy, 1500);
+setInterval(spawnEnemy, 1000);
 
 // ================= LOOP =================
 function loop() {
